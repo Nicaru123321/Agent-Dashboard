@@ -1,0 +1,137 @@
+body {
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #1f2d3d, #3a506b);
+  color: #333;
+}
+
+header {
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav button {
+  margin: 0 0.5rem;
+  padding: 0.7rem 1.4rem;
+  background: linear-gradient(135deg, #3a506b, #1f2d3d);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background: #0d1b2a;
+  transform: scale(1.05);
+}
+
+/* Dashboard fade effect */
+.dashboard {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: none;
+}
+
+.dashboard.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Agent card */
+.agent-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 700px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  margin: 2rem auto;
+}
+
+.agent-card h2 {
+  margin-top: 0;
+  color: #1f2d3d;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.current-day {
+  background: linear-gradient(135deg, #eef6ff, #dce9ff);
+  padding: 1.2rem;
+  border-radius: 14px;
+  border: 1px solid #d0e3ff;
+  margin-bottom: 1.5rem;
+}
+
+.current-day p {
+  margin: 0.8rem 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.current-day input[type="date"] {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+button.saveBtn, button.exportBtn, #exportAll {
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  background: linear-gradient(135deg, #3a506b, #1f2d3d);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+button.saveBtn:hover, button.exportBtn:hover, #exportAll:hover {
+  background: #0d1b2a;
+  box-shadow: 0 0 10px rgba(58,80,107,0.6);
+  transform: scale(1.05);
+}
+
+/* History Table */
+table.history {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+table.history th, table.history td {
+  padding: 0.8rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table.history th {
+  background: #3a506b;
+  color: #fff;
+  font-weight: 500;
+}
+
+table.history tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  font-size: 0.9rem;
+}

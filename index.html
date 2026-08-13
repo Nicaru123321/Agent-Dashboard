@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Dashboards</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Agent Performance Dashboards</h1>
+    <nav>
+      <button onclick="showDashboard('daily')">Daily Dashboard</button>
+      <button onclick="showDashboard('weekly')">Weekly Dashboard</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Daily Dashboard -->
+    <section id="daily" class="dashboard visible">
+      <h2>Daily Dashboard</h2>
+      <div class="agent-card" data-type="daily">
+        <h2 contenteditable="true">Agent A</h2>
+        <div class="current-day">
+          <p><strong>Date:</strong> <input type="date" id="agentA-date"></p>
+          <p><strong>Traffic:</strong> <span contenteditable="true" id="agentA-traffic">0</span></p>
+          <p><strong>Volume:</strong> <span contenteditable="true" id="agentA-volume">0</span></p>
+          <p><strong>Submissions:</strong> <span contenteditable="true" id="agentA-crm">0</span></p>
+          <button class="saveBtn">Save Daily Entry</button>
+        </div>
+        <h3>History</h3>
+        <table class="history">
+          <thead>
+            <tr>
+              <th>Date Saved</th>
+              <th>Traffic</th>
+              <th>Volume</th>
+              <th>Submissions</th>
+              <th>Conversions (%)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button class="exportBtn">Export Agent History</button>
+      </div>
+    </section>
+
+    <!-- Weekly Dashboard -->
+    <section id="weekly" class="dashboard hidden">
+      <h2>Weekly Dashboard</h2>
+      <div class="agent-card" data-type="weekly">
+        <h2 contenteditable="true">Agent A</h2>
+        <div class="current-day">
+          <p><strong>From:</strong> <input type="date" id="weeklyA-from"></p>
+          <p><strong>Thru:</strong> <input type="date" id="weeklyA-thru"></p>
+          <p><strong>Total Traffic:</strong> <span contenteditable="true" id="weeklyA-traffic">0</span></p>
+          <p><strong>Total Volume:</strong> <span contenteditable="true" id="weeklyA-volume">0</span></p>
+          <p><strong>Total Submissions:</strong> <span contenteditable="true" id="weeklyA-crm">0</span></p>
+          <button class="saveBtn">Save Weekly Entry</button>
+        </div>
+        <h3>History</h3>
+        <table class="history">
+          <thead>
+            <tr>
+              <th>From</th>
+              <th>Thru</th>
+              <th>Traffic</th>
+              <th>Volume</th>
+              <th>Submissions</th>
+              <th>Conversions (%)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button class="exportBtn">Export Agent History</button>
+      </div>
+    </section>
+
+    <!-- Export All Agents -->
+    <div style="text-align:center; margin:2rem;">
+      <button id="exportAll">Export All Agents History</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Agent Dashboards</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
